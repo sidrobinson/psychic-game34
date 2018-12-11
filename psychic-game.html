@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>
+    <title> Psychic Game! </title>
+</head>
+
+<body>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Guess the letter!</h1>
+        </div>
+    </div>
+
+    <div>user wins</div>
+    <div>user loses</div>
+    <div>Draws</div>
+    <div>guesses left</div>
+    <div>number of guesses used</div>
+
+    <div id="user-wins"></div>
+    <div id="User loses"></div>
+    <div id="Draws"></div>
+    <div id="Guesses left"></div>
+    <div id="Number of guesses used"></div>
+
+    <script>
+        $(document).ready(function () {
+
+            // let guess = point
+            let newGuess = Math.floor(guess);
+
+            let userWins = document.querySelector("#user-wins");
+            userWins.textContent = "I win";
+
+
+
+            if (newGuess += guess) {
+                yourReturn = ""
+            }
+            else {
+                if (newGuess += guess) {
+                    yourReturn = ""
+                }
+                else {
+                    yourReturn = ""
+                }
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>
