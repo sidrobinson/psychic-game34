@@ -2,60 +2,67 @@
 <html lang="en-us">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-          crossorigin="anonymous"></script>
-    <title> Psychic Game! </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
 
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4">Guess the letter!</h1>
-        </div>
+    <!-- Title of page -->
+    <div class="jumbotron">
+        <h1 class="display-4">My portfolio!</h1>
     </div>
 
-    <div>user wins</div>
-    <div>user loses</div>
-    <div>Draws</div>
-    <div>guesses left</div>
-    <div>number of guesses used</div>
+    <!-- Nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div id="user-wins"></div>
-    <div id="User loses"></div>
-    <div id="Draws"></div>
-    <div id="Guesses left"></div>
-    <div id="Number of guesses used"></div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
 
-    <script>
-        $(document).ready(function () {
+                <li class="nav-item">
+                    <a class="nav-link"
+                        href="file:///Users/bernardrobinson/Desktop/Class/homeWork1/classhw1.html">homeWork 1</a>
+                </li>
 
-            // let guess = point
-            let newGuess = Math.floor(guess);
+                <!-- Possible dropdown code below -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        homeWork1
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://github.com/sidrobinson/hw1">github Page</a>
+                        <a class="dropdown-item"
+                            href="file:///Users/bernardrobinson/Desktop/Class/homeWork1/classhw1.html">Deployed Page</a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </li>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
 
-            let userWins = document.querySelector("#user-wins");
-            userWins.textContent = "I win";
-
-
-
-            if (newGuess += guess) {
-                yourReturn = ""
-            }
-            else {
-                if (newGuess += guess) {
-                    yourReturn = ""
-                }
-                else {
-                    yourReturn = ""
-                }
-            }
-        })
-
-    </script>
+        </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 
 </body>
+
 
 </html>
