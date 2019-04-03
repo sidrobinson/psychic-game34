@@ -1,15 +1,21 @@
-// Beginning of functional code
+// Beginning of correct code
 
-// End of functional code
+// let guesses = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+// let userWins = document.getElementsByClassName("userWins");
+// let userLoses = document.getElementsByClassName("userLoses");
+// let guessesLeft = document.getElementsByClassName("guessesLeft");
+// let answers = document.getElementsByClassName("answers");
+// let userGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
+// let guessesUsed = [];
+
+// End of correct code
 // <===============================================================>
 // Start of new code
-
 let guesses = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-let userWins = document.getElementsByClassName("userWins");
-let userLoses = document.getElementsByClassName("userLoses");
-// let guessesUsed = document.getElementsByClassName("guessesUsed");
-let guessesLeft = document.getElementsByClassName("guessesLeft");
-let answers = document.getElementsByClassName("answers");
+let userWins = (document).getElementsByClassName("userWins");
+let userLoses = (document).getElementsByClassName("userLoses");
+let guessesLeft = (document).getElementsByClassName("guessesLeft");
+let answers = (document).getElementsByClassName("answers");
 let userGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
 let guessesUsed = [];
 
@@ -19,9 +25,9 @@ function random() {
     guessesUsed = [];
 };
 
-document.addEventListener("onkeyup", function (event) {
+$(document).addEventListener(keypress, function (event) {
 
-    let guesses = event.key;
+    let guesses = event.keypress;
 
     if (guesses === answers) {
         wins++;
@@ -37,7 +43,6 @@ document.addEventListener("onkeyup", function (event) {
         alert("You lost");
     }
 
-
     userWinsText.text = "user wins: " + userWins;
     userLosesText.text = "user loses: " + userLoses;
     userGuessText.text = "number of guesses used: " + guessesUsed;
@@ -48,7 +53,6 @@ document.addEventListener("onkeyup", function (event) {
 });
 
 // End of new code
-
 // <===============================================================>
 // Original code below
 // Not complete/functional yet
