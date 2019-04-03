@@ -4,6 +4,19 @@
 // <===============================================================>
 // Start of new code
 
+document.addEventListener("onkeyup", function (event) {
+
+	// If the clicked element doesn't have the right selector, bail
+	if (!event.target.matches('.click-me')) return;
+
+	// Don't follow the link
+	event.preventDefault();
+
+	// Log the clicked element in the console
+	console.log(event.target);
+
+}, false);
+
 let guesses = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 let userWins = document.getElementsByClassName("userWins");
 let userLoses = document.getElementsByClassName("userLoses");
@@ -19,7 +32,7 @@ function random() {
     guessesUsed = [];
 };
 
-document.onkeydown = function (event) {
+document.addEventListener("onkeyup", function (event) {
 
     let guesses = event.key;
 
@@ -33,7 +46,7 @@ document.onkeydown = function (event) {
     }
     if (guessesLeft == 0) {
         losses++;
-        randletter();
+        random();
         alert("You lost");
     }
 
@@ -45,7 +58,7 @@ document.onkeydown = function (event) {
 
     guessesUsed.push(guesses);
 
-};
+}, false);
 
 // End of new code
 
