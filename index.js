@@ -1,12 +1,6 @@
 // Beginning of correct code
 
-// let guesses = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-// let userWins = document.getElementsByClassName("userWins");
-// let userLoses = document.getElementsByClassName("userLoses");
-// let guessesLeft = document.getElementsByClassName("guessesLeft");
-// let answers = document.getElementsByClassName("answers");
-// let userGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
-// let guessesUsed = [];
+
 
 // End of correct code
 // <===============================================================>
@@ -16,16 +10,16 @@ let userWins = (document).getElementsByClassName("userWins");
 let userLoses = (document).getElementsByClassName("userLoses");
 let guessesLeft = (document).getElementsByClassName("guessesLeft");
 let answers = (document).getElementsByClassName("answers");
-let userGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
+let userGuess = guesses[Math.floor(Math.random() * guesses.length)];
 let guessesUsed = [];
 
 function random() {
-    answers = alphabet[Math.floor(Math.random() * alphabet.length)];
+    answers = guesses[Math.floor(Math.random() * guesses.length)];
     guessesLeft = 10;
     guessesUsed = [];
 };
 
-$(document).addEventListener(keypress, function (event) {
+(document).addEventListener("keypress", function (event) {
 
     let guesses = event.keypress;
 
@@ -43,10 +37,10 @@ $(document).addEventListener(keypress, function (event) {
         alert("You lost");
     }
 
-    userWinsText.text = "user wins: " + userWins;
-    userLosesText.text = "user loses: " + userLoses;
-    userGuessText.text = "number of guesses used: " + guessesUsed;
-    guessesUsedText.text = "guesses left: " + guessesLeft;
+    userWins.text = "user wins: " + userWins;
+    userLoses.text = "user loses: " + userLoses;
+    userGuess.text = "number of guesses used: " + guessesUsed;
+    guessesUsed.text = "guesses left: " + guessesLeft;
 
     guessesUsed.push(guesses);
 
