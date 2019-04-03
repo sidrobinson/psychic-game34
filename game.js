@@ -2,8 +2,8 @@
 
 // End of functional code
 // <===============================================================>
-
 // Start of new code
+
 // $(document).ready(function () {
 
 //     let guess = Math.floor(Math.random);
