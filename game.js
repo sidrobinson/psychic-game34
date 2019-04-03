@@ -4,32 +4,19 @@
 // <===============================================================>
 // Start of new code
 
-// $(document).ready(function () {
-
-//     let guess = Math.floor(Math.random);
-//     let answers = [i, p, j, s, b]; 
-// }; 
-
-// $(document).getElementsByClassName("game").innerText = guess;
-// attempts --;
-
-// if (win < 1)
-// {
-//     document.getElementsByClassName
-// };
-// <===============================================================>
 let guesses = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 let userWins = document.getElementsByClassName("userWins");
 let userLoses = document.getElementsByClassName("userLoses");
-let guessesUsed = document.getElementsByClassName("guessesUsed");
+// let guessesUsed = document.getElementsByClassName("guessesUsed");
 let guessesLeft = document.getElementsByClassName("guessesLeft");
 let answers = document.getElementsByClassName("answers");
 let userGuess = alphabet[Math.floor(Math.random() * alphabet.length)];
 let guessesUsed = [];
+
 function random() {
     answers = alphabet[Math.floor(Math.random() * alphabet.length)];
     guessesLeft = 10;
-    lettersUsed = [];
+    guessesUsed = [];
 };
 
 document.onkeydown = function (event) {
