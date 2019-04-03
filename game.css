@@ -1,4 +1,4 @@
-.head{
+.header {
     /* padding-top: 20px;
     padding-left: 20px;
     padding: 45px;
@@ -9,5 +9,6 @@
 }
 
 .totals {
+    padding: 10px;
     margin-right: 20px;   
 }
