@@ -1,76 +1,56 @@
-// Beginning of correct code
-
-
-
-// End of correct code
-// <===============================================================>
-// Start of new code
 let guesses = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-let userWins = (document).getElementsByClassName("userWins");
-let userLoses = (document).getElementsByClassName("userLoses");
-let guessesLeft = (document).getElementsByClassName("guessesLeft");
-let answers = (document).getElementsByClassName("answers");
+let userWins = 0;
+let userWinsElement = document.querySelector(".userWins");
+let userLosesElement = document.querySelector(".userLoses");
+let userLoses = 0;
+let guessesLeft = document.querySelector(".guessesLeft");
+let guessesUsedElement = document.querySelector("#guessesUsed");
+let answers = document.querySelector(".answers");
 let userGuess = guesses[Math.floor(Math.random() * guesses.length)];
 let guessesUsed = [];
+let xAmountOfGuessesLeft = 10
+
+
+function reset() {
+    xAmountOfGuessesLeft = 10
+    guessesUsed = [];
+
+};
 
 function random() {
     answers = guesses[Math.floor(Math.random() * guesses.length)];
-    guessesLeft = 10;
-    guessesUsed = [];
+    console.log(answers);
 };
+random();
+// event listenr for keydown
+document.addEventListener("keydown", function (event) {
+    const guessedLetters = String.fromCharCode(event.keyCode);
+    guessesUsed.push(guessedLetters.toLocaleLowerCase());
+    guessesUsedElement.textContent = guessesUsed;
 
-(document).addEventListener("keypress", function (event) {
-
-    let guesses = event.keypress;
-
+// push to guessused array
+console.log(guessedLetters);
+console.log(guessesUsed);
+guesses.textContent = [];
+// count the number of turns
+// check the answer
     if (guesses === answers) {
         wins++;
         random();
-        alert("Nice one Psychic. You win!");
+        reset();
     }
-    else {
-        guessesLeft--;
-    }
-    if (guessesLeft == 0) {
-        losses++;
+    else if(xAmountOfGuessesLeft > 0) {
+        --xAmountOfGuessesLeft;    
+        guessesLeft.textContent = xAmountOfGuessesLeft;
+    } else {
+        userLoses++;
+        userLosesElement.textContent = userLoses;
+        reset();
         random();
-        alert("You lost");
     }
 
-    userWins.text = "user wins: " + userWins;
-    userLoses.text = "user loses: " + userLoses;
-    userGuess.text = "number of guesses used: " + guessesUsed;
-    guessesUsed.text = "guesses left: " + guessesLeft;
-
-    guessesUsed.push(guesses);
+    if (userLoses > 6) {
+        alert("You have lost!");
+    }
 
 });
-
-// End of new code
-// <===============================================================>
-// Original code below
-// Not complete/functional yet
-
-// $(document).ready(function () {
-
-//     // let guess = point
-//     let newGuess = Math.floor(guess);
-
-//     let userWins = document.querySelector(".user-wins");
-//     userWins.textContent = "I win";
-
-
-
-//     if (newGuess += guess) {
-//         yourReturn = ""
-//     }
-//     else {
-//         if (newGuess += guess) {
-//             yourReturn = ""
-//         }
-//         else {
-//             yourReturn = ""
-//         }
-//     }
-// });
-// End of original code
